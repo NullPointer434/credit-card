@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--container-->
+    <div class="container">
+        <!--card-->
+        <section class="card" id="card">
+            <!--front-->
+            <div class="front">
+                <div class="logo" id="logo">
+                    <!-- <img src="img/logos/visa.png" alt=""> -->
+                </div>
+                <img src="img/chip-tarjeta.png" class="chip" alt="">
+                
+                <div class="data">
+                    <div class="group" id="card-number">
+                        <p class="label">Card Number</p>
+                        <p class="card-number">#### #### #### ####</p>
+                    </div>
+                </div>
+
+                <div class="flexbox">
+                    <div class="group" id="card-name">
+                        <p class="label">Card Name</p>
+                        <p class="card-name">Jhon Doe</p>
+                    </div>
+                    <div class="group" id="card-expiration">
+                        <p class="label">Expiration</p>
+                        <p class="card-expiration">
+                            <span class="month">mm</span> / <span class="year">yy</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--back-->
+            <div class="back">
+                <div class="magnetic-bar"></div>
+                
+                <div class="data">
+                    <div class="group" id="signature">
+                        <p class="label">Signature</p>
+                        <div class="signature">
+                            <p>Jhon Doe</p>
+                        </div>
+                    </div>
+                    <div class="group" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                    </div>
+                </div>
+
+                <p class="legend">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, sequi asperiores accusantium cum repudiandae similique debitis cupiditate quaerat eveniet quibusdam eum nostrum illum eos rerum, ratione soluta iure. Doloremque, repellat!
+                </p>
+                <a href="#" class="bank-link">www.bank.com</a>
+            </div>
+        </section>
+
+        <!--button open form-->
+        <div class="btn-container">
+            <button class="open-form-btn" id="open-form-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <!-- form -->
+        <form action="" id="card-form" class="card-form">
+            <div class="group">
+                <label for="inputNumber">Card Number</label>
+                <input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="group">
+                <label for="inputName">Name</label>
+                <input type="text" id="inputName" maxlength="">
+            </div>
+
+            <div class="flexbox">
+                
+                <div class="group expiration">
+                    <label for="selectMonth">Expiration</label>
+                    <div class="flexbox">
+                        
+                        <div class="select-group">
+                            <select name="month" id="selectMonth">
+                                <option disabled selected>Month</option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+
+                        <div class="select-group">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Year</option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="group ccv">
+                    <label for="inputCcv">CCV</label>
+                    <input type="text" id="inputCcv" maxlength="3">
+                </div>
+            </div>
+
+            <button type="submit" class="send-btn">Send</button>
+        </form>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/7f80656689.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
